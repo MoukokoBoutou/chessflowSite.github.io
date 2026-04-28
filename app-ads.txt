@@ -146,3 +146,5 @@ sharethrough.com, bxzzb1br, RESELLER, d53b998a7bd4ecd2
 voisetech.com, 1066, RESELLER
 smartadserver.com, 4568, RESELLER, 060d053dcf45cbf3
 lacunads.com, lcb555b3bc8667a09a, RESELLER
+rubiconproject.com, 17062, RESELLER, 0bfd66d529a55807
+triplelift.com, 95054, RESELLER, 6c33edb13117fd86
