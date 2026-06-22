@@ -1,0 +1,63 @@
+name: Notify IndexNow
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "*.html"
+      - "sitemap.xml"
+      - "robots.txt"
+      - "assets/**"
+      - "42dca1a0d254b68c720616ca10883dd3.txt"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wait for the Netlify deployment
+        shell: bash
+        run: |
+          key_url="https://chessflow.fr/42dca1a0d254b68c720616ca10883dd3.txt"
+          for attempt in {1..24}; do
+            value="$(curl --silent --show-error --fail --max-time 15 "$key_url" || true)"
+            if [[ "$value" == "42dca1a0d254b68c720616ca10883dd3" ]]; then
+              echo "Netlify deployment is ready."
+              exit 0
+            fi
+            echo "Waiting for Netlify deployment ($attempt/24)..."
+            sleep 10
+          done
+          echo "The IndexNow key was not published in time."
+          exit 1
+
+      - name: Submit updated URLs to IndexNow
+        shell: bash
+        run: |
+          status="$(curl --silent --show-error \
+            --output indexnow-response.txt \
+            --write-out "%{http_code}" \
+            --request POST \
+            --header "Content-Type: application/json; charset=utf-8" \
+            --data '{
+              "host": "chessflow.fr",
+              "key": "42dca1a0d254b68c720616ca10883dd3",
+              "keyLocation": "https://chessflow.fr/42dca1a0d254b68c720616ca10883dd3.txt",
+              "urlList": [
+                "https://chessflow.fr/",
+                "https://chessflow.fr/en.html",
+                "https://chessflow.fr/privacy.html",
+                "https://chessflow.fr/delete-account.html"
+              ]
+            }' \
+            https://api.indexnow.org/indexnow)"
+
+          cat indexnow-response.txt
+          if [[ "$status" != "200" && "$status" != "202" ]]; then
+            echo "IndexNow returned HTTP $status."
+            exit 1
+          fi
+          echo "IndexNow accepted the URLs with HTTP $status."
