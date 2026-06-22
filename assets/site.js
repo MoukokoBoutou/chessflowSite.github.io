@@ -3,6 +3,8 @@
   const supported = ['fr', 'en'];
 
   function preferredLanguage() {
+    const pageLanguage = document.body.dataset.defaultLanguage;
+    if (supported.includes(pageLanguage)) return pageLanguage;
     let saved = null;
     try { saved = localStorage.getItem(storageKey); } catch (_) { /* Storage can be disabled. */ }
     if (supported.includes(saved)) return saved;
