@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://moukokoboutou.github.io/chessflowSite.github.io/sitemap.xml
+Sitemap: https://chessflow.fr/sitemap.xml
