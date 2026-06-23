@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07090d">
+  <meta name="robots" content="noindex, follow">
+  <meta name="description" content="Ouvrir un puzzle ChessFlow dans l'application Android.">
+  <link rel="canonical" href="https://chessflow.fr/puzzle/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ChessFlow">
+  <meta property="og:title" content="Puzzle ChessFlow">
+  <meta property="og:description" content="Ouvrez ce puzzle dans ChessFlow.">
+  <meta property="og:image" content="https://chessflow.fr/assets/chessflow-og-fr.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Puzzle ChessFlow</title>
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192.png">
+  <link rel="apple-touch-icon" href="/assets/favicon-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body class="puzzle-link-page">
+  <main class="puzzle-open-main">
+    <section class="puzzle-open-card" aria-live="polite">
+      <img src="/assets/chessflow-icon.png" alt="" width="72" height="72">
+      <p class="eyebrow">Puzzle ChessFlow</p>
+      <h1>Ouverture du puzzle...</h1>
+      <p id="puzzle-open-message">Si ChessFlow est installé, l'application va s'ouvrir automatiquement.</p>
+      <div class="puzzle-open-actions">
+        <a class="button button-primary" id="open-app-link" href="https://play.google.com/store/apps/details?id=com.rolf.ChessFlow">Ouvrir ChessFlow</a>
+        <a class="text-link" href="https://play.google.com/store/apps/details?id=com.rolf.ChessFlow">
+          <span>Installer l'application</span><span aria-hidden="true">↗</span>
+        </a>
+      </div>
+      <a class="legal-back" href="/">← Retour au site</a>
+    </section>
+  </main>
+
+  <script>
+    (function () {
+      var playStoreUrl = 'https://play.google.com/store/apps/details?id=com.rolf.ChessFlow';
+      var segments = window.location.pathname.split('/').filter(Boolean);
+      var puzzleId = segments[0] === 'puzzle' ? segments[1] : null;
+      var message = document.getElementById('puzzle-open-message');
+      var openLink = document.getElementById('open-app-link');
+
+      if (!puzzleId) {
+        message.textContent = "Ce lien de puzzle est incomplet.";
+        openLink.textContent = "Télécharger ChessFlow";
+        openLink.href = playStoreUrl;
+        return;
+      }
+
+      var appUrl = 'chessopen://puzzle/' + encodeURIComponent(puzzleId);
+      var pageHidden = false;
+      openLink.href = appUrl;
+
+      document.addEventListener('visibilitychange', function () {
+        pageHidden = document.hidden;
+      });
+
+      window.setTimeout(function () {
+        window.location.href = appUrl;
+      }, 250);
+
+      window.setTimeout(function () {
+        if (pageHidden) {
+          return;
+        }
+        message.textContent = "Si rien ne s'est ouvert, installez ChessFlow ou réessayez avec le bouton.";
+        if (/Android/i.test(window.navigator.userAgent)) {
+          window.location.href = playStoreUrl;
+        }
+      }, 1800);
+    })();
+  </script>
+</body>
+</html>
