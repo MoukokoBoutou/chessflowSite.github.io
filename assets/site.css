@@ -231,6 +231,7 @@ h1 em { color: var(--blue-light); font-style: normal; }
 .puzzle-open-main { min-height: 100vh; display: grid; place-items: center; padding: 32px 16px; }
 .puzzle-open-card { width: min(100%, 520px); padding: clamp(28px, 7vw, 48px); border: 1px solid rgba(105,160,255,.2); border-radius: 28px; background: linear-gradient(145deg, rgba(17,22,32,.96), rgba(9,12,18,.96)); box-shadow: 0 32px 90px rgba(0,0,0,.45); text-align: center; }
 .puzzle-open-card img { width: 72px; height: 72px; margin: 0 auto 24px; border-radius: 18px; }
+.puzzle-open-card .language-switcher { width: max-content; margin: -6px auto 22px; }
 .puzzle-open-card .eyebrow { margin-bottom: 12px; }
 .puzzle-open-card h1 { margin: 0; font-size: clamp(2.1rem, 8vw, 3.4rem); line-height: 1.04; }
 .puzzle-open-card p:not(.eyebrow) { margin: 20px auto 0; color: var(--muted); font-size: .92rem; }

@@ -1,22 +1,22 @@
 <!doctype html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#07090d">
   <meta name="robots" content="noindex, follow">
-  <meta name="description" content="Ouvrir un puzzle ChessFlow dans l'application Android.">
-  <link rel="canonical" href="https://chessflow.fr/puzzle/">
-  <link rel="alternate" hreflang="fr" href="https://chessflow.fr/puzzle/">
-  <link rel="alternate" hreflang="en" href="https://chessflow.fr/puzzle/en/">
-  <link rel="alternate" hreflang="x-default" href="https://chessflow.fr/puzzle/">
+  <meta name="description" content="Open a ChessFlow opening in the Android app.">
+  <link rel="canonical" href="https://chessflow.fr/opening/en/">
+  <link rel="alternate" hreflang="fr" href="https://chessflow.fr/opening/">
+  <link rel="alternate" hreflang="en" href="https://chessflow.fr/opening/en/">
+  <link rel="alternate" hreflang="x-default" href="https://chessflow.fr/opening/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="ChessFlow">
-  <meta property="og:title" content="Puzzle ChessFlow">
-  <meta property="og:description" content="Ouvrez ce puzzle dans ChessFlow.">
-  <meta property="og:image" content="https://chessflow.fr/assets/chessflow-og-fr.jpg">
+  <meta property="og:title" content="ChessFlow opening">
+  <meta property="og:description" content="Open this opening in ChessFlow.">
+  <meta property="og:image" content="https://chessflow.fr/assets/chessflow-og-en.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <title>Puzzle ChessFlow</title>
+  <title>ChessFlow opening</title>
   <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192.png">
   <link rel="apple-touch-icon" href="/assets/favicon-192.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,20 +29,20 @@
   <main class="puzzle-open-main">
     <section class="puzzle-open-card" aria-live="polite">
       <img src="/assets/chessflow-icon.png" alt="" width="72" height="72">
-      <div class="language-switcher" aria-label="Choisir la langue">
-        <a id="language-fr-link" href="/puzzle/" lang="fr" hreflang="fr" aria-current="page">FR</a>
-        <a id="language-en-link" href="/puzzle/en/" lang="en" hreflang="en">EN</a>
+      <div class="language-switcher" aria-label="Choose language">
+        <a id="language-fr-link" href="/opening/" lang="fr" hreflang="fr">FR</a>
+        <a id="language-en-link" href="/opening/en/" lang="en" hreflang="en" aria-current="page">EN</a>
       </div>
-      <p class="eyebrow">Puzzle ChessFlow</p>
-      <h1>Ouverture du puzzle...</h1>
-      <p id="puzzle-open-message">Si ChessFlow est installé, l'application va s'ouvrir automatiquement.</p>
+      <p class="eyebrow">ChessFlow opening</p>
+      <h1>Opening lesson...</h1>
+      <p id="opening-open-message">If ChessFlow is installed, the app will open automatically.</p>
       <div class="puzzle-open-actions">
-        <a class="button button-primary" id="open-app-link" href="https://play.google.com/store/apps/details?id=com.rolf.ChessFlow">Ouvrir ChessFlow</a>
+        <a class="button button-primary" id="open-app-link" href="https://play.google.com/store/apps/details?id=com.rolf.ChessFlow">Open ChessFlow</a>
         <a class="text-link" href="https://play.google.com/store/apps/details?id=com.rolf.ChessFlow">
-          <span>Installer l'application</span><span aria-hidden="true">↗</span>
+          <span>Install the app</span><span aria-hidden="true">↗</span>
         </a>
       </div>
-      <a class="legal-back" href="/">← Retour au site</a>
+      <a class="legal-back" href="/en.html">← Back to site</a>
     </section>
   </main>
 
@@ -54,25 +54,25 @@
 
       var playStoreUrl = 'https://play.google.com/store/apps/details?id=com.rolf.ChessFlow';
       var segments = window.location.pathname.split('/').filter(Boolean);
-      var puzzleId = segments[0] === 'puzzle' ? segments[1] : null;
-      var message = document.getElementById('puzzle-open-message');
+      var openingId = segments[0] === 'opening' && segments[1] === 'en' ? segments[2] : null;
+      var message = document.getElementById('opening-open-message');
       var openLink = document.getElementById('open-app-link');
       var languageFrLink = document.getElementById('language-fr-link');
       var languageEnLink = document.getElementById('language-en-link');
 
-      if (puzzleId && languageFrLink && languageEnLink) {
-        languageFrLink.href = '/puzzle/' + encodeURIComponent(puzzleId);
-        languageEnLink.href = '/puzzle/en/' + encodeURIComponent(puzzleId);
+      if (openingId && languageFrLink && languageEnLink) {
+        languageFrLink.href = '/opening/' + encodeURIComponent(openingId);
+        languageEnLink.href = '/opening/en/' + encodeURIComponent(openingId);
       }
 
-      if (!puzzleId) {
-        message.textContent = "Ce lien de puzzle est incomplet.";
-        openLink.textContent = "Télécharger ChessFlow";
+      if (!openingId) {
+        message.textContent = 'This opening link is incomplete.';
+        openLink.textContent = 'Download ChessFlow';
         openLink.href = playStoreUrl;
         return;
       }
 
-      var appUrl = 'chessopen://puzzle/' + encodeURIComponent(puzzleId);
+      var appUrl = 'chessopen://opening/' + encodeURIComponent(openingId);
       var pageHidden = false;
       openLink.href = appUrl;
 
@@ -88,7 +88,7 @@
         if (pageHidden) {
           return;
         }
-        message.textContent = "Si rien ne s'est ouvert, installez ChessFlow ou réessayez avec le bouton.";
+        message.textContent = 'If nothing opened, install ChessFlow or try again with the button.';
         if (/Android/i.test(window.navigator.userAgent)) {
           window.location.href = playStoreUrl;
         }
