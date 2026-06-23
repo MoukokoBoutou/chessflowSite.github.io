@@ -80,6 +80,83 @@
     element.textContent = new Date().getFullYear();
   });
 
+  const guideItems = [
+    { slug: 'repertoires', fr: 'Répertoires', en: 'Repertoires' },
+    { slug: 'import-pgn', fr: 'Import PGN', en: 'PGN import' },
+    { slug: 'entrainement-ouvertures', fr: 'Entraînement', en: 'Training' },
+    { slug: 'statistiques', fr: 'Statistiques', en: 'Statistics' },
+    { slug: 'puzzles', fr: 'Puzzles', en: 'Puzzles' },
+    { slug: 'analyse-stockfish', fr: 'Stockfish', en: 'Stockfish' },
+  ];
+
+  function guidePath(item, lang, fromArticle) {
+    const prefix = fromArticle ? '../' : '';
+    return lang === 'en' ? `${prefix}${item.slug}/en.html` : `${prefix}${item.slug}/`;
+  }
+
+  function guideIndexPath(lang, fromArticle) {
+    if (fromArticle) return lang === 'en' ? '../en.html' : '../';
+    return lang === 'en' ? 'en.html' : './';
+  }
+
+  function currentGuideIndex() {
+    const pathname = window.location.pathname;
+    return guideItems.findIndex((item) => pathname.includes(`/guide/${item.slug}/`));
+  }
+
+  function addGuideNavigation() {
+    if (!document.body.dataset.page || !document.body.dataset.page.startsWith('guide')) return;
+
+    const lang = document.body.dataset.defaultLanguage === 'en' ? 'en' : 'fr';
+    const hero = document.querySelector('.guide-hero');
+    const articleLayout = document.querySelector('.article-layout');
+    if (!hero || document.querySelector('.guide-quick-nav')) return;
+
+    const activeIndex = currentGuideIndex();
+    const fromArticle = activeIndex !== -1;
+    const quickNav = document.createElement('nav');
+    quickNav.className = 'guide-quick-nav';
+    quickNav.setAttribute('aria-label', lang === 'en' ? 'Guide sections' : 'Rubriques du guide');
+
+    const indexLink = document.createElement('a');
+    indexLink.href = guideIndexPath(lang, fromArticle);
+    indexLink.textContent = lang === 'en' ? 'All guides' : 'Tous les guides';
+    if (activeIndex === -1) indexLink.setAttribute('aria-current', 'page');
+    quickNav.append(indexLink);
+
+    guideItems.forEach((item, index) => {
+      const link = document.createElement('a');
+      link.href = guidePath(item, lang, fromArticle);
+      link.textContent = item[lang];
+      if (index === activeIndex) link.setAttribute('aria-current', 'page');
+      quickNav.append(link);
+    });
+    hero.after(quickNav);
+
+    if (!articleLayout || activeIndex === -1 || document.querySelector('.guide-step-nav')) return;
+
+    const previous = guideItems[activeIndex - 1];
+    const next = guideItems[activeIndex + 1];
+    const stepNav = document.createElement('nav');
+    stepNav.className = 'guide-step-nav';
+    stepNav.setAttribute('aria-label', lang === 'en' ? 'Guide article navigation' : 'Navigation entre les articles du guide');
+
+    const previousLink = document.createElement('a');
+    previousLink.className = 'guide-step-previous';
+    previousLink.href = previous ? guidePath(previous, lang, true) : guideIndexPath(lang, true);
+    previousLink.innerHTML = `<span>${lang === 'en' ? 'Previous' : 'Précédent'}</span><strong>${previous ? previous[lang] : (lang === 'en' ? 'All guides' : 'Tous les guides')}</strong>`;
+
+    const nextLink = document.createElement('a');
+    nextLink.className = 'guide-step-next';
+    nextLink.href = next ? guidePath(next, lang, true) : guideIndexPath(lang, true);
+    nextLink.innerHTML = `<span>${lang === 'en' ? 'Next' : 'Suivant'}</span><strong>${next ? next[lang] : (lang === 'en' ? 'All guides' : 'Tous les guides')}</strong>`;
+
+    stepNav.append(previousLink, nextLink);
+    articleLayout.after(stepNav);
+  }
+
+  addGuideNavigation();
+
   const reveals = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     const observer = new IntersectionObserver((entries) => {

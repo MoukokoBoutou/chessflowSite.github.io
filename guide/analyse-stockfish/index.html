@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07090d">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="description" content="Utiliser Stockfish dans une leçon ChessFlow : barre d’évaluation, meilleur coup et option pour faire jouer l’adversaire par le moteur.">
+  <link rel="canonical" href="https://chessflow.fr/guide/analyse-stockfish/">
+  <link rel="alternate" hreflang="fr" href="https://chessflow.fr/guide/analyse-stockfish/">
+  <link rel="alternate" hreflang="en" href="https://chessflow.fr/guide/analyse-stockfish/en.html">
+  <link rel="alternate" hreflang="x-default" href="https://chessflow.fr/guide/analyse-stockfish/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ChessFlow">
+  <meta property="og:title" content="Utiliser Stockfish dans une leçon ChessFlow">
+  <meta property="og:description" content="Comprendre la barre d’évaluation, le meilleur coup et l’option adversaire Stockfish.">
+  <meta property="og:url" content="https://chessflow.fr/guide/analyse-stockfish/">
+  <meta property="og:image" content="https://chessflow.fr/assets/chessflow-og-fr.jpg">
+  <meta property="og:locale" content="fr_FR">
+  <title>Utiliser Stockfish dans une leçon ChessFlow</title>
+  <link rel="icon" type="image/png" sizes="192x192" href="../../assets/favicon-192.png">
+  <link rel="apple-touch-icon" href="../../assets/favicon-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/site.css">
+  <script src="../../assets/site.js" defer></script>
+</head>
+<body data-page="guide-article" data-default-language="fr">
+  <a class="skip-link" href="#main">Aller au contenu</a>
+  <header class="site-header"><nav class="nav container" aria-label="Navigation principale"><a class="brand" href="../../index.html"><img src="../../assets/chessflow-icon.png" alt="" width="42" height="42"><span>ChessFlow</span></a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-panel" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button><div class="nav-panel" id="nav-panel"><ul class="nav-links"><li><a href="../../index.html">Accueil</a></li><li><a href="../" aria-current="page">Guide</a></li></ul><div class="nav-actions"><div class="language-switcher" aria-label="Choisir la langue"><a href="./" lang="fr" hreflang="fr" aria-current="page">FR</a><a href="en.html" lang="en" hreflang="en">EN</a></div><a class="button button-small" href="https://play.google.com/store/apps/details?id=com.rolf.ChessFlow" target="_blank" rel="noopener noreferrer">Google Play</a></div></div></nav></header>
+  <main class="guide-main" id="main">
+    <div class="container">
+      <a class="legal-back" href="../"><span aria-hidden="true">←</span><span>Retour au guide</span></a>
+      <header class="guide-hero reveal"><div><p class="eyebrow">Guide · Stockfish</p><h1>Utiliser Stockfish<br><em>pendant une leçon.</em></h1><p>Dans ChessFlow, Stockfish accompagne la leçon d’ouverture : il affiche une barre d’évaluation, indique le meilleur coup de la position actuelle et peut jouer les coups adverses si vous activez cette option.</p><div class="article-meta"><span>Barre d’évaluation</span><span>Meilleur coup</span><span>Adversaire moteur</span></div></div><aside class="guide-hero-card"><strong>Objectif de la session</strong><span>Utiliser le moteur comme repère ponctuel, sans transformer la leçon en analyse infinie.</span></aside></header>
+      <div class="article-layout">
+        <article class="article-body reveal">
+          <p>Stockfish se trouve dans la section d’analyse du menu de leçon. Une fois activé, il ajoute une barre d’évaluation à côté de l’échiquier et affiche le meilleur coup pour la position en cours. L’idée est de vous donner un repère immédiat pendant que vous parcourez votre ouverture.</p>
+          <p>Servez-vous de l’évaluation comme d’un signal, pas comme d’un verdict absolu. Si la barre change fortement après un coup, la position mérite une pause : vous avez peut-être raté une tactique, laissé une pièce mal placée ou choisi un plan qui ne fonctionne pas.</p>
+          <h2>Lire le meilleur coup</h2>
+          <p>Le meilleur coup est surtout utile quand vous hésitez entre deux idées ou quand une variante du répertoire ne vous semble pas naturelle. Regardez le coup proposé, puis essayez de le traduire en phrase simple : quelle menace crée-t-il, quelle faiblesse défend-il, quelle pièce améliore-t-il ?</p>
+          <ul><li>Si le coup confirme votre idée, continuez la leçon.</li><li>S’il contredit votre coup prévu, prenez le temps de comprendre la différence.</li><li>S’il révèle une tactique, revenez ensuite sur la branche concernée dans votre répertoire.</li></ul>
+          <div class="takeaway"><strong>À retenir</strong><p>Stockfish doit vous aider à formuler une idée plus claire, pas à copier une suite de coups que vous ne pourrez pas retrouver en partie.</p></div>
+          <h2>Faire jouer l’adversaire</h2>
+          <p>L’option “Stockfish joue l’adversaire” laisse le moteur choisir le coup du camp opposé quand c’est son tour. C’est utile pour sortir du mode “je connais déjà la réponse” et vérifier si vous savez garder le plan face à une défense concrète.</p>
+          <p>Utilisez ce mode sur de petites portions de répertoire. Si vous laissez le moteur tout jouer trop longtemps, vous risquez de travailler une position trop éloignée de votre objectif de départ. Le bon rythme : activer, tester quelques coups, puis revenir à la ligne que vous vouliez apprendre.</p>
+          <h2>Revenir à la leçon</h2>
+          <p>Après un passage avec Stockfish, gardez une seule conclusion : le coup à retenir, l’idée à corriger ou la branche à simplifier. C’est cette conclusion qui améliore votre prochaine session d’entraînement.</p>
+        </article>
+        <aside class="article-aside reveal"><div class="article-aside-card"><h2>À lire aussi</h2><a href="../repertoires/">Corriger un répertoire</a><a href="../entrainement-ouvertures/">Revenir à l'entraînement</a><a href="../puzzles/">Travailler la tactique</a></div><div class="article-aside-card"><h2>Bon réflexe</h2><a href="../entrainement-ouvertures/">Tester peu de coups, puis reprendre la leçon</a></div></aside>
+      </div>
+      <section class="guide-cta reveal"><div><h2>Activez Stockfish avec une intention claire.</h2><p>Vérifiez un coup, comprenez l’évaluation, puis revenez à l’objectif principal : mieux jouer votre ouverture.</p></div><a class="button button-primary" href="https://play.google.com/store/apps/details?id=com.rolf.ChessFlow" target="_blank" rel="noopener noreferrer"><span><small>Disponible sur</small><strong>Google Play</strong></span></a></section>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="container footer-layout"><a class="brand" href="../../index.html"><img src="../../assets/chessflow-icon.png" alt="" width="38" height="38"><span>ChessFlow</span></a><p>© <span data-current-year>2026</span> ChessFlow.</p><ul><li><a href="../">Guide</a></li><li><a href="../../privacy.html">Confidentialité</a></li><li><a href="mailto:chessflowof@gmail.com">Contact</a></li></ul></div></footer>
+</body>
+</html>

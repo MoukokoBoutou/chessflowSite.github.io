@@ -20,6 +20,132 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://chessflow.fr/" />
   </url>
   <url>
+    <loc>https://chessflow.fr/guide/</loc>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://chessflow.fr/guide/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://chessflow.fr/guide/en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chessflow.fr/guide/" />
+  </url>
+  <url>
+    <loc>https://chessflow.fr/guide/en.html</loc>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://chessflow.fr/guide/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://chessflow.fr/guide/en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chessflow.fr/guide/" />
+  </url>
+  <url>
+    <loc>https://chessflow.fr/guide/repertoires/</loc>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://chessflow.fr/guide/repertoires/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://chessflow.fr/guide/repertoires/en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chessflow.fr/guide/repertoires/" />
+  </url>
+  <url>
+    <loc>https://chessflow.fr/guide/repertoires/en.html</loc>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://chessflow.fr/guide/repertoires/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://chessflow.fr/guide/repertoires/en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chessflow.fr/guide/repertoires/" />
+  </url>
+  <url>
+    <loc>https://chessflow.fr/guide/import-pgn/</loc>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://chessflow.fr/guide/import-pgn/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://chessflow.fr/guide/import-pgn/en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chessflow.fr/guide/import-pgn/" />
+  </url>
+  <url>
+    <loc>https://chessflow.fr/guide/import-pgn/en.html</loc>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://chessflow.fr/guide/import-pgn/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://chessflow.fr/guide/import-pgn/en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chessflow.fr/guide/import-pgn/" />
+  </url>
+  <url>
+    <loc>https://chessflow.fr/guide/entrainement-ouvertures/</loc>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://chessflow.fr/guide/entrainement-ouvertures/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://chessflow.fr/guide/entrainement-ouvertures/en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chessflow.fr/guide/entrainement-ouvertures/" />
+  </url>
+  <url>
+    <loc>https://chessflow.fr/guide/entrainement-ouvertures/en.html</loc>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://chessflow.fr/guide/entrainement-ouvertures/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://chessflow.fr/guide/entrainement-ouvertures/en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chessflow.fr/guide/entrainement-ouvertures/" />
+  </url>
+  <url>
+    <loc>https://chessflow.fr/guide/statistiques/</loc>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://chessflow.fr/guide/statistiques/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://chessflow.fr/guide/statistiques/en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chessflow.fr/guide/statistiques/" />
+  </url>
+  <url>
+    <loc>https://chessflow.fr/guide/statistiques/en.html</loc>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://chessflow.fr/guide/statistiques/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://chessflow.fr/guide/statistiques/en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chessflow.fr/guide/statistiques/" />
+  </url>
+  <url>
+    <loc>https://chessflow.fr/guide/puzzles/</loc>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://chessflow.fr/guide/puzzles/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://chessflow.fr/guide/puzzles/en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chessflow.fr/guide/puzzles/" />
+  </url>
+  <url>
+    <loc>https://chessflow.fr/guide/puzzles/en.html</loc>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://chessflow.fr/guide/puzzles/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://chessflow.fr/guide/puzzles/en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chessflow.fr/guide/puzzles/" />
+  </url>
+  <url>
+    <loc>https://chessflow.fr/guide/analyse-stockfish/</loc>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://chessflow.fr/guide/analyse-stockfish/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://chessflow.fr/guide/analyse-stockfish/en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chessflow.fr/guide/analyse-stockfish/" />
+  </url>
+  <url>
+    <loc>https://chessflow.fr/guide/analyse-stockfish/en.html</loc>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://chessflow.fr/guide/analyse-stockfish/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://chessflow.fr/guide/analyse-stockfish/en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chessflow.fr/guide/analyse-stockfish/" />
+  </url>
+  <url>
     <loc>https://chessflow.fr/privacy.html</loc>
     <lastmod>2026-06-22</lastmod>
     <changefreq>yearly</changefreq>
