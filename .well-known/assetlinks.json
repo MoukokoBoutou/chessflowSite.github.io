@@ -1,13 +1,15 @@
 [
   {
     "relation": [
-      "delegate_permission/common.handle_all_urls"
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
     ],
     "target": {
       "namespace": "android_app",
       "package_name": "com.rolf.ChessFlow",
       "sha256_cert_fingerprints": [
-        "B9:CD:40:63:05:DD:70:7C:B9:D4:CB:FB:82:F6:BA:17:95:9A:57:07:09:60:7D:4F:1B:3C:42:E3:01:8A:61:15"
+        "B9:CD:40:63:05:DD:70:7C:B9:D4:CB:FB:82:F6:BA:17:95:9A:57:07:09:60:7D:4F:1B:3C:42:E3:01:8A:61:15",
+        "6A:78:AF:05:41:95:48:9E:2C:83:B4:BE:CF:D8:A9:C0:E7:E4:62:52:F6:73:A7:EE:36:66:E2:12:B0:87:2B:C4"
       ]
     }
   }
