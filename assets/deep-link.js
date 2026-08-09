@@ -74,6 +74,7 @@
   const isAndroid = /Android/i.test(navigator.userAgent);
   let pageHidden = false;
   let fallbackTimer = 0;
+  let automaticAttemptTimer = 0;
 
   const setReadyMode = () => {
     button.href = isAndroid ? intentUrl : appUrl;
@@ -84,23 +85,8 @@
   };
   setReadyMode();
 
-  document.addEventListener('visibilitychange', () => {
-    pageHidden = document.hidden;
-    if (pageHidden) {
-      window.clearTimeout(fallbackTimer);
-    } else {
-      setReadyMode();
-    }
-  });
-  window.addEventListener('pagehide', () => {
-    pageHidden = true;
+  const beginOpenAttempt = () => {
     window.clearTimeout(fallbackTimer);
-  });
-  window.addEventListener('pageshow', setReadyMode);
-
-  button.addEventListener('click', (event) => {
-    if (button.dataset.mode === 'store') return;
-
     pageHidden = false;
     status.textContent = labels.loading;
     setButtonLabel(labels.loading);
@@ -111,10 +97,41 @@
       setStoreMode();
       window.location.assign(storeUrl.toString());
     }, 1600);
+  };
+
+  document.addEventListener('visibilitychange', () => {
+    pageHidden = document.hidden;
+    if (pageHidden) {
+      window.clearTimeout(fallbackTimer);
+      window.clearTimeout(automaticAttemptTimer);
+    } else {
+      setReadyMode();
+    }
+  });
+  window.addEventListener('pagehide', () => {
+    pageHidden = true;
+    window.clearTimeout(fallbackTimer);
+    window.clearTimeout(automaticAttemptTimer);
+  });
+  window.addEventListener('pageshow', setReadyMode);
+
+  button.addEventListener('click', (event) => {
+    if (button.dataset.mode === 'store') return;
+
+    window.clearTimeout(automaticAttemptTimer);
+    beginOpenAttempt();
 
     if (!isAndroid) {
       event.preventDefault();
       window.location.href = appUrl;
     }
   });
+
+  if (isAndroid) {
+    automaticAttemptTimer = window.setTimeout(() => {
+      if (document.hidden) return;
+      beginOpenAttempt();
+      window.location.replace(intentUrl);
+    }, 350);
+  }
 })();
