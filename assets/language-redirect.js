@@ -20,23 +20,40 @@
     return first.startsWith('en') ? 'en' : 'fr';
   }
 
+  function isLocalPreview() {
+    const hostname = window.location.hostname;
+    return window.location.protocol === 'file:'
+      || hostname === 'localhost'
+      || hostname === '127.0.0.1'
+      || hostname === '0.0.0.0'
+      || hostname === '::1'
+      || hostname.endsWith('.localhost');
+  }
+
+  function keepPreviewOrigin(target) {
+    if (!isLocalPreview() || window.location.protocol === 'file:') return target;
+    target.protocol = window.location.protocol;
+    target.host = window.location.host;
+    return target;
+  }
+
   function alternateUrl(language) {
     const link = document.querySelector(`link[rel="alternate"][hreflang="${language}"]`);
     if (!link) return null;
 
     const script = document.currentScript;
     const preservePathTail = script && script.dataset.preservePathTail === 'true';
-    if (!preservePathTail) return new URL(link.href, window.location.href);
+    if (!preservePathTail) return keepPreviewOrigin(new URL(link.href, window.location.href));
 
     const currentLink = document.querySelector(`link[rel="alternate"][hreflang="${currentLanguage}"]`);
-    if (!currentLink) return new URL(link.href, window.location.href);
+    if (!currentLink) return keepPreviewOrigin(new URL(link.href, window.location.href));
 
     const currentBase = new URL(currentLink.href, window.location.href).pathname;
     const target = new URL(link.href, window.location.href);
     const pathname = window.location.pathname;
     const tail = pathname.startsWith(currentBase) ? pathname.slice(currentBase.length) : '';
     target.pathname = `${target.pathname.replace(/\/?$/, '/')}${tail}`;
-    return target;
+    return keepPreviewOrigin(target);
   }
 
   function persistLanguage(language) {
@@ -55,6 +72,7 @@
   }, true);
 
   if (!supported.includes(currentLanguage)) return;
+  if (window.location.protocol === 'file:') return;
 
   const preferred = storedLanguage() || browserLanguage();
   if (preferred === currentLanguage) return;

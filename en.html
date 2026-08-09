@@ -72,38 +72,6 @@
     ]
   }
   </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Is ChessFlow a good app to learn chess openings?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Start with a focused repertoire, understand the main ideas, then practise recalling moves without looking. ChessFlow organises those lines and measures mastery over time."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I import my opening repertoire from PGN?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. ChessFlow imports PGN from files or text and also supports compatible Lichess study and game links."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is ChessFlow suitable for beginner chess players?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. The app works for players discovering openings and for experienced players who want to structure, review and track an existing repertoire."
-        }
-      }
-    ]
-  }
-  </script>
   <script src="assets/language-redirect.js"></script>
   <script src="assets/site.js" defer></script>
 </head>
@@ -126,8 +94,8 @@
       </button>
       <div class="nav-panel" id="nav-panel">
         <ul class="nav-links">
-          <li><a href="#features" data-fr="Fonctionnalités" data-en="Features">Features</a></li>
-          <li><a href="#screenshots" data-fr="Captures" data-en="Screenshots">Screenshots</a></li>
+          <li><a href="#features" data-fr="Fonctions" data-en="Features">Features</a></li>
+          <li><a href="#try" data-fr="Essayer" data-en="Try it">Try it</a></li>
           <li><a href="guide/en.html" data-fr="Guide" data-en="Guide">Guide</a></li>
         </ul>
         <div class="nav-actions">
@@ -135,7 +103,7 @@
             <a href="index.html" lang="fr" hreflang="fr">FR</a>
             <a href="en.html" lang="en" hreflang="en" aria-current="page">EN</a>
           </div>
-          <a class="button button-small" href="https://play.google.com/store/apps/details?id=com.rolf.ChessFlow" target="_blank" rel="noopener noreferrer" data-fr="Google Play" data-en="Google Play">Google Play</a>
+          <a class="button button-small" href="https://play.google.com/store/apps/details?id=com.rolf.ChessFlow" target="_blank" rel="noopener noreferrer" data-play-cta="nav" data-fr="Google Play" data-en="Google Play">Google Play</a>
         </div>
       </div>
     </nav>
@@ -146,25 +114,19 @@
       <div class="hero-glow hero-glow-one"></div>
       <div class="hero-glow hero-glow-two"></div>
       <div class="container hero-layout">
-        <div class="hero-copy reveal">
-          <p class="eyebrow"><span></span><strong data-fr="Disponible sur Android" data-en="Available on Android">Available on Android</strong></p>
-          <h1 data-fr="L’entraîneur de vos<br><em>ouvertures d’échecs.</em>" data-en="Your chess opening<br><em>trainer.</em>">Your chess opening<br><em>trainer.</em></h1>
-          <p class="hero-lead" data-fr="Construisez votre répertoire d’ouvertures, importez vos parties et entraînez chaque variante jusqu’à ce qu’elle devienne un réflexe." data-en="Build your chess opening repertoire, import your games and train every variation until it becomes second nature.">Build your chess opening repertoire, import your games and train every variation until it becomes second nature.</p>
+        <div class="hero-copy">
+          <h1 data-fr="Maîtrisez vos<br><em>ouvertures d’échecs.</em>" data-en="Master your<br><em>chess openings.</em>">Master your<br><em>chess openings.</em></h1>
+          <p class="hero-lead" data-fr="Créez ou importez votre répertoire. Entraînez chaque variante jusqu’au bon réflexe." data-en="Build or import your repertoire. Train every line until it feels automatic.">Build or import your repertoire. Train every line until it feels automatic.</p>
           <div class="hero-actions">
-            <a class="button button-primary" href="https://play.google.com/store/apps/details?id=com.rolf.ChessFlow" target="_blank" rel="noopener noreferrer">
+            <a class="button button-primary" href="https://play.google.com/store/apps/details?id=com.rolf.ChessFlow" target="_blank" rel="noopener noreferrer" data-play-cta="hero">
               <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m3.4 2.7 10.8 9.3L3.4 21.3c-.3-.4-.4-.9-.4-1.5V4.2c0-.6.1-1.1.4-1.5Zm12 10.3 2.7 2.3-11.7 6.4 9-8.7Zm3.9-3.2c.5.3.7.7.7 1.2s-.2.9-.7 1.2l-2.1 1.2-2.9-2.4 2.9-2.4 2.1 1.2ZM6.4 2.3l11.7 6.4-2.7 2.3-9-8.7Z"/></svg>
               <span><small data-fr="Disponible sur" data-en="Get it on">Get it on</small><strong>Google Play</strong></span>
             </a>
-            <a class="text-link" href="#features"><span data-fr="Découvrir l’application" data-en="Discover the app">Discover the app</span><span aria-hidden="true">↘</span></a>
+            <a class="text-link" href="#try"><span data-fr="Essayer maintenant" data-en="Try it now">Try it now</span><span aria-hidden="true">↓</span></a>
           </div>
-          <ul class="hero-points" aria-label="Points forts" data-aria-fr="Points forts" data-aria-en="Highlights">
-            <li data-fr="Démarrage gratuit" data-en="Free to start">Free to start</li>
-            <li data-fr="Pensée pour Android" data-en="Designed for Android">Designed for Android</li>
-            <li data-fr="Vos données synchronisées" data-en="Your data in sync">Your data in sync</li>
-          </ul>
         </div>
 
-        <div class="hero-visual reveal" aria-hidden="true">
+        <div class="hero-visual" aria-hidden="true">
           <div class="orbit orbit-one"></div>
           <div class="orbit orbit-two"></div>
           <div class="app-card">
@@ -185,122 +147,96 @@
       </div>
     </section>
 
-    <section class="section" id="features">
-      <div class="container">
-        <div class="section-heading reveal">
-          <div><p class="eyebrow" data-fr="Fonctionnalités" data-en="Features">Features</p><h2 data-fr="Tout votre entraînement,<br>dans un même flow." data-en="All your training,<br>in one flow.">Tout votre entraînement,<br>dans un même flow.</h2></div>
-          <p data-fr="ChessFlow relie apprentissage, pratique et progression dans une expérience claire, conçue pour vous faire jouer les bons coups au bon moment." data-en="ChessFlow connects learning, practice and progress in one clear experience designed to help you play the right moves at the right time.">ChessFlow connects learning, practice and progress in one clear experience designed to help you play the right moves at the right time.</p>
+    <section class="section trial-section" id="try">
+      <div class="container trial-layout reveal">
+        <div class="trial-intro">
+          <p class="eyebrow">Quick trial</p>
+          <h2>Play the line.</h2>
+          <p>Move the pieces as you would in ChessFlow and find three Italian Game moves.</p>
+          <div class="trial-benefit"><span aria-hidden="true">✓</span><span>No account required</span></div>
         </div>
-        <div class="features-grid">
-          <article class="feature-card feature-card-large reveal">
-            <span class="feature-number">01</span><div class="feature-icon">♞</div>
-            <h3 data-fr="Vos répertoires, à votre façon" data-en="Your repertoires, your way">Your repertoires, your way</h3>
-            <p data-fr="Créez vos lignes coup par coup ou importez-les depuis un fichier PGN, Lichess ou Chess.com." data-en="Build your lines move by move or import them from a PGN file, Lichess or Chess.com.">Build your lines move by move or import them from a PGN file, Lichess or Chess.com.</p>
-            <div class="line-tree"><span>e4</span><i></i><span>e5</span><i></i><span>Cf3</span><i></i><span>Cc6</span></div>
-          </article>
-          <article class="feature-card reveal">
-            <span class="feature-number">02</span><div class="feature-icon">◎</div>
-            <h3 data-fr="Entraînement intelligent" data-en="Smart training">Smart training</h3>
-            <p data-fr="Travaillez chaque variante activement et revenez sur les coups qui vous résistent." data-en="Practise every variation actively and revisit the moves that challenge you.">Practise every variation actively and revisit the moves that challenge you.</p>
-          </article>
-          <article class="feature-card reveal">
-            <span class="feature-number">03</span><div class="feature-icon">◇</div>
-            <h3 data-fr="Puzzles variés" data-en="Varied puzzles">Varied puzzles</h3>
-            <p data-fr="Aiguisez votre tactique avec plusieurs modes, séries et défis quotidiens." data-en="Sharpen your tactics with multiple modes, streaks and daily challenges.">Sharpen your tactics with multiple modes, streaks and daily challenges.</p>
-          </article>
-          <article class="feature-card reveal">
-            <span class="feature-number">04</span><div class="feature-icon">↗</div>
-            <h3 data-fr="Progression visible" data-en="Visible progress">Visible progress</h3>
-            <p data-fr="Repérez vos points faibles grâce aux statistiques détaillées et mesurez votre régularité." data-en="Spot your weak points with detailed statistics and track your consistency.">Spot your weak points with detailed statistics and track your consistency.</p>
-          </article>
-          <article class="feature-card reveal">
-            <span class="feature-number">05</span><div class="feature-icon">✦</div>
-            <h3 data-fr="Une app qui vous ressemble" data-en="An app that feels like yours">An app that feels like yours</h3>
-            <p data-fr="Personnalisez l’échiquier, les pièces, les thèmes et les palettes de couleurs." data-en="Customise the board, pieces, themes and colour palettes.">Customise the board, pieces, themes and colour palettes.</p>
-          </article>
-          <article class="feature-card feature-card-premium reveal">
-            <span class="feature-number">06</span><span class="premium-chip">Premium</span><div class="feature-icon">☁</div>
-            <h3 data-fr="Toujours synchronisé" data-en="Always in sync">Always in sync</h3>
-            <p data-fr="Retrouvez vos ouvertures et votre progression sur vos appareils grâce à la synchronisation cloud." data-en="Keep your openings and progress available across your devices with cloud sync.">Keep your openings and progress available across your devices with cloud sync.</p>
-          </article>
+        <div class="opening-trial" data-opening-trial data-language="en">
+          <div class="trial-topline">
+            <span class="trial-opening">Italian Game · White</span>
+            <span class="trial-score"><strong data-trial-score>0</strong> / 3</span>
+          </div>
+          <div class="trial-progress" aria-hidden="true"><span data-trial-progress></span></div>
+          <div class="trial-board-frame">
+            <div class="trial-board" data-trial-board role="grid" aria-label="Interactive chessboard, White to move" aria-busy="true"></div>
+          </div>
+          <div class="trial-coach">
+            <div>
+              <span class="trial-step" data-trial-step>Step 1 of 3</span>
+              <div class="trial-line" data-trial-line>1. e4 e5&nbsp;&nbsp;2. Nf3 Nc6</div>
+            </div>
+            <div>
+              <p class="trial-question" data-trial-question>Play White’s next move.</p>
+              <p class="trial-feedback" data-trial-feedback aria-live="polite">Tap a piece and its destination, or drag it.</p>
+            </div>
+          </div>
+          <div class="trial-complete" data-trial-complete hidden>
+            <div><span aria-hidden="true">✓</span><strong>Line memorized</strong></div>
+            <a class="button button-primary" href="https://play.google.com/store/apps/details?id=com.rolf.ChessFlow" target="_blank" rel="noopener noreferrer" data-play-cta="trial_complete">Train my repertoire <span aria-hidden="true">↗</span></a>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section trainer-section" id="opening-trainer">
+    <section class="section" id="features">
       <div class="container">
-        <div class="section-heading reveal">
-          <div>
-            <p class="eyebrow" data-fr="Méthode d’apprentissage" data-en="Learning method">Learning method</p>
-            <h2 data-fr="Une application pour apprendre<br>les ouvertures aux échecs." data-en="A chess opening trainer<br>built for real practice.">A chess opening trainer<br>built for real practice.</h2>
-          </div>
-          <p data-fr="Mémoriser une liste de coups ne suffit pas. ChessFlow transforme votre répertoire en exercices interactifs pour apprendre les variantes, repérer vos erreurs et réviser régulièrement." data-en="Designed as an opening trainer for chess players, ChessFlow combines a chess repertoire trainer, interactive lessons and progress tracking in one focused app.">Designed as an opening trainer for chess players, ChessFlow combines a chess repertoire trainer, interactive lessons and progress tracking in one focused app.</p>
+        <div class="section-heading section-heading-compact reveal">
+          <div><p class="eyebrow" data-fr="En trois étapes" data-en="Three simple steps">Three simple steps</p><h2 data-fr="Importez. Jouez.<br>Retenez." data-en="Import. Play.<br>Remember.">Import. Play.<br>Remember.</h2></div>
         </div>
-
-        <div class="trainer-steps">
-          <article class="trainer-step reveal">
-            <span>01</span>
-            <h3 data-fr="Construisez votre répertoire d’ouvertures" data-en="Build your chess opening repertoire">Build your chess opening repertoire</h3>
-            <p data-fr="Créez vos lignes sur l’échiquier ou importez un PGN depuis un fichier, une étude Lichess ou une partie Chess.com. Classez ensuite vos ouvertures avec les Blancs et les Noirs." data-en="This chess opening repertoire app lets you create lines on the board or import PGN from a file, a Lichess study or a Chess.com game, for both White and Black.">This chess opening repertoire app lets you create lines on the board or import PGN from a file, a Lichess study or a Chess.com game, for both White and Black.</p>
-          </article>
-          <article class="trainer-step reveal">
-            <span>02</span>
-            <h3 data-fr="Entraînez les variantes activement" data-en="Train every variation actively">Train every variation actively</h3>
-            <p data-fr="Jouez vous-même les bons coups face aux réponses adverses. Cet entraînement actif aide à retenir les positions et les idées bien mieux qu’une simple lecture." data-en="Play the right moves yourself against your opponent’s replies. Active training helps you remember positions and ideas far better than passive reading.">Play the right moves yourself against your opponent’s replies. Active training helps you remember positions and ideas far better than passive reading.</p>
-          </article>
-          <article class="trainer-step reveal">
-            <span>03</span>
-            <h3 data-fr="Suivez votre maîtrise" data-en="Track your opening mastery">Track your opening mastery</h3>
-            <p data-fr="Identifiez les coups faibles, consultez vos statistiques et concentrez vos prochaines sessions sur les ouvertures qui demandent encore du travail." data-en="Identify weak moves, review detailed statistics and focus each new session on the openings that still need work.">Identify weak moves, review detailed statistics and focus each new session on the openings that still need work.</p>
-          </article>
-        </div>
-
-        <div class="faq-block reveal">
-          <div class="faq-intro">
-            <p class="eyebrow" data-fr="Questions fréquentes" data-en="Frequently asked questions">Frequently asked questions</p>
-            <h2 data-fr="Bien démarrer avec<br>vos ouvertures." data-en="Start training your<br>openings the right way.">Start training your<br>openings the right way.</h2>
-          </div>
-          <div class="faq-list">
-            <details>
-              <summary data-fr="Comment apprendre efficacement une ouverture d’échecs ?" data-en="Is ChessFlow a good app to learn chess openings?">Is ChessFlow a good app to learn chess openings?</summary>
-              <p data-fr="Travaillez un répertoire limité, comprenez les idées principales puis entraînez-vous à retrouver les coups sans les regarder. ChessFlow organise ces lignes et mesure votre maîtrise au fil des sessions." data-en="Start with a focused repertoire, understand the main ideas, then practise recalling moves without looking. ChessFlow organises those lines and measures mastery over time.">Start with a focused repertoire, understand the main ideas, then practise recalling moves without looking. ChessFlow organises those lines and measures mastery over time.</p>
-            </details>
-            <details>
-              <summary data-fr="Puis-je importer mon répertoire au format PGN ?" data-en="Can I import my opening repertoire from PGN?">Can I import my opening repertoire from PGN?</summary>
-              <p data-fr="Oui. ChessFlow accepte l’import PGN depuis un fichier ou du texte, ainsi que les liens d’études Lichess et de parties compatibles." data-en="Yes. ChessFlow imports PGN from files or text and also supports compatible Lichess study and game links.">Yes. ChessFlow imports PGN from files or text and also supports compatible Lichess study and game links.</p>
-            </details>
-            <details>
-              <summary data-fr="ChessFlow convient-il aux joueurs débutants ?" data-en="Is ChessFlow suitable for beginner chess players?">Is ChessFlow suitable for beginner chess players?</summary>
-              <p data-fr="Oui. L’application convient aux joueurs qui découvrent les ouvertures comme à ceux qui possèdent déjà un répertoire et souhaitent le structurer, le réviser et suivre leurs progrès." data-en="Yes. The app works for players discovering openings and for experienced players who want to structure, review and track an existing repertoire.">Yes. The app works for players discovering openings and for experienced players who want to structure, review and track an existing repertoire.</p>
-            </details>
-          </div>
+        <div class="features-grid">
+          <a class="feature-card feature-card-wide reveal" href="guide/repertoires/en.html">
+            <div class="feature-card-top"><span class="feature-step" aria-hidden="true">01</span><span class="feature-arrow" aria-hidden="true">↗</span></div>
+            <h3 data-fr="Transformez vos parties en répertoire" data-en="Turn your games into a repertoire">Turn your games into a repertoire</h3>
+            <p data-fr="Importez un PGN, une étude Lichess ou une partie Chess.com. Vos variantes sont prêtes à entraîner." data-en="Import a PGN, Lichess study or Chess.com game. Your lines are ready to train.">Import a PGN, Lichess study or Chess.com game. Your lines are ready to train.</p>
+            <div class="import-flow" aria-hidden="true"><div class="import-sources"><span>PGN</span><span>Lichess</span><span>Chess.com</span></div><i>→</i><div class="import-result"><small>Repertoire</small><strong>12 variations</strong><span><b></b> Ready to train</span></div></div>
+          </a>
+          <a class="feature-card feature-card-train reveal" href="guide/entrainement-ouvertures/en.html">
+            <div class="feature-card-top"><span class="feature-step" aria-hidden="true">02</span><span class="feature-arrow" aria-hidden="true">↗</span></div>
+            <h3 data-fr="Jouez les coups, pas les listes" data-en="Play moves, not lists">Play moves, not lists</h3>
+            <p data-fr="ChessFlow vous replace dans la position et vous fait retrouver le prochain coup." data-en="ChessFlow puts you back in the position and asks you to find the next move.">ChessFlow puts you back in the position and asks you to find the next move.</p>
+            <div class="training-preview" aria-hidden="true"><div class="training-preview-top"><span>Italian · 4/6</span><i><b></b></i></div><div class="training-preview-main"><img src="assets/merida/wN.svg" alt="" width="50" height="50"><div><small>Your move</small><strong>Nf3 → g5</strong></div></div><div class="training-preview-success"><span>✓</span> Move remembered</div></div>
+          </a>
+          <a class="feature-card feature-card-progress reveal" href="guide/statistiques/en.html">
+            <div class="feature-card-top"><span class="feature-step" aria-hidden="true">03</span><span class="feature-arrow" aria-hidden="true">↗</span></div>
+            <h3 data-fr="Revenez sur ce qui bloque" data-en="Revisit what holds you back">Revisit what holds you back</h3>
+            <p data-fr="La maîtrise et vos erreurs indiquent exactement quelle ligne retravailler." data-en="Mastery and mistakes show you exactly which line to train again.">Mastery and mistakes show you exactly which line to train again.</p>
+            <div class="review-preview" aria-hidden="true"><div class="mastery-ring"><strong>87%</strong></div><div class="review-summary"><small>To review</small><strong>3 moves</strong><span>Focused session <i>→</i></span></div></div>
+          </a>
         </div>
       </div>
     </section>
 
     <section class="section screenshots-section" id="screenshots">
       <div class="container">
-        <div class="section-heading screenshots-heading reveal">
-          <div><p class="eyebrow" data-fr="Dans l’application" data-en="Inside the app">Inside the app</p><h2 data-fr="Simple à regarder.<br>Naturelle à utiliser." data-en="Easy on the eyes.<br>Natural to use.">Simple à regarder.<br>Naturelle à utiliser.</h2></div>
-          <p data-fr="Quatre espaces, un seul objectif : transformer votre travail aux échecs en progrès concret." data-en="Four spaces, one goal: turn your chess work into real progress.">Four spaces, one goal: turn your chess work into real progress.</p>
+        <div class="section-heading section-heading-compact screenshots-heading reveal">
+          <div><p class="eyebrow" data-fr="Dans l’application" data-en="Inside the app">Inside the app</p><h2 data-fr="ChessFlow en action." data-en="ChessFlow in action.">ChessFlow in action.</h2></div>
         </div>
-        <div class="screenshots-grid">
-          <figure class="screenshot-card reveal">
-            <div class="phone-frame"><div class="phone-speaker"></div><img class="screenshot-image" src="assets/screenshots/repertoires.webp" data-alt-fr="Écran de l’entraîneur de répertoires d’ouvertures ChessFlow" data-alt-en="ChessFlow chess opening repertoire trainer screen" alt="ChessFlow chess opening repertoire trainer screen" width="1080" height="2107" decoding="async"><div class="screenshot-placeholder"><span>♞</span><small data-fr="Ajoutez votre capture" data-en="Add your screenshot">Add your screenshot</small><code>repertoires.webp</code></div></div>
-            <figcaption><span>01</span><strong data-fr="Répertoires" data-en="Repertoires">Repertoires</strong></figcaption>
-          </figure>
-          <figure class="screenshot-card reveal">
-            <div class="phone-frame"><div class="phone-speaker"></div><img class="screenshot-image" src="assets/screenshots/training.webp" data-alt-fr="Leçon interactive pour apprendre une ouverture d’échecs" data-alt-en="Interactive ChessFlow lesson to learn chess openings" alt="Interactive ChessFlow lesson to learn chess openings" width="1080" height="2133" decoding="async"><div class="screenshot-placeholder"><span>◎</span><small data-fr="Ajoutez votre capture" data-en="Add your screenshot">Add your screenshot</small><code>training.webp</code></div></div>
-            <figcaption><span>02</span><strong data-fr="Entraînement" data-en="Training">Training</strong></figcaption>
-          </figure>
-          <figure class="screenshot-card reveal">
-            <div class="phone-frame"><div class="phone-speaker"></div><img class="screenshot-image" src="assets/screenshots/puzzles.webp" data-alt-fr="Entraînement de puzzles tactiques dans ChessFlow" data-alt-en="Tactical puzzle training in the ChessFlow app" alt="Tactical puzzle training in the ChessFlow app" width="1080" height="2136" decoding="async"><div class="screenshot-placeholder"><span>◇</span><small data-fr="Ajoutez votre capture" data-en="Add your screenshot">Add your screenshot</small><code>puzzles.webp</code></div></div>
-            <figcaption><span>03</span><strong data-fr="Puzzles" data-en="Puzzles">Puzzles</strong></figcaption>
-          </figure>
-          <figure class="screenshot-card reveal">
-            <div class="phone-frame"><div class="phone-speaker"></div><img class="screenshot-image" src="assets/screenshots/statistics.webp" data-alt-fr="Statistiques de maîtrise des ouvertures dans ChessFlow" data-alt-en="Chess opening mastery statistics in ChessFlow" alt="Chess opening mastery statistics in ChessFlow" width="1080" height="2133" decoding="async"><div class="screenshot-placeholder"><span>↗</span><small data-fr="Ajoutez votre capture" data-en="Add your screenshot">Add your screenshot</small><code>statistics.webp</code></div></div>
-            <figcaption><span>04</span><strong data-fr="Statistiques" data-en="Statistics">Statistics</strong></figcaption>
-          </figure>
+        <div class="showcase reveal" data-showcase>
+          <div class="showcase-tabs" role="tablist" aria-label="ChessFlow screens" data-aria-fr="Écrans de ChessFlow" data-aria-en="ChessFlow screens">
+            <button class="showcase-tab is-active" id="tab-repertoires" type="button" role="tab" aria-selected="true" aria-controls="screen-repertoires" data-showcase-tab="repertoires"><span>01</span><strong data-fr="Répertoires" data-en="Repertoires">Repertoires</strong><i aria-hidden="true">↗</i></button>
+            <button class="showcase-tab" id="tab-training" type="button" role="tab" aria-selected="false" aria-controls="screen-training" tabindex="-1" data-showcase-tab="training"><span>02</span><strong data-fr="Entraînement" data-en="Training">Training</strong><i aria-hidden="true">↗</i></button>
+            <button class="showcase-tab" id="tab-puzzles" type="button" role="tab" aria-selected="false" aria-controls="screen-puzzles" tabindex="-1" data-showcase-tab="puzzles"><span>03</span><strong data-fr="Puzzles" data-en="Puzzles">Puzzles</strong><i aria-hidden="true">↗</i></button>
+            <button class="showcase-tab" id="tab-statistics" type="button" role="tab" aria-selected="false" aria-controls="screen-statistics" tabindex="-1" data-showcase-tab="statistics"><span>04</span><strong data-fr="Statistiques" data-en="Statistics">Statistics</strong><i aria-hidden="true">↗</i></button>
+          </div>
+          <div class="showcase-stage">
+            <div class="showcase-orbit" aria-hidden="true"></div>
+            <figure class="showcase-screen is-active" id="screen-repertoires" role="tabpanel" aria-labelledby="tab-repertoires" data-showcase-screen="repertoires">
+              <div class="phone-frame"><div class="phone-speaker"></div><img class="screenshot-image" src="assets/screenshots/repertoires.webp" data-alt-fr="Répertoires d’ouvertures dans ChessFlow" data-alt-en="Opening repertoires in ChessFlow" alt="Opening repertoires in ChessFlow" width="1080" height="2107" loading="lazy" decoding="async" fetchpriority="low"></div>
+            </figure>
+            <figure class="showcase-screen" id="screen-training" role="tabpanel" aria-labelledby="tab-training" data-showcase-screen="training" hidden>
+              <div class="phone-frame"><div class="phone-speaker"></div><img class="screenshot-image" src="assets/screenshots/training.webp" data-alt-fr="Entraînement d’une variante dans ChessFlow" data-alt-en="Variation training in ChessFlow" alt="Variation training in ChessFlow" width="1080" height="2133" loading="lazy" decoding="async" fetchpriority="low"></div>
+            </figure>
+            <figure class="showcase-screen" id="screen-puzzles" role="tabpanel" aria-labelledby="tab-puzzles" data-showcase-screen="puzzles" hidden>
+              <div class="phone-frame"><div class="phone-speaker"></div><img class="screenshot-image" src="assets/screenshots/puzzles.webp" data-alt-fr="Puzzles tactiques dans ChessFlow" data-alt-en="Tactical puzzles in ChessFlow" alt="Tactical puzzles in ChessFlow" width="1080" height="2136" loading="lazy" decoding="async" fetchpriority="low"></div>
+            </figure>
+            <figure class="showcase-screen" id="screen-statistics" role="tabpanel" aria-labelledby="tab-statistics" data-showcase-screen="statistics" hidden>
+              <div class="phone-frame"><div class="phone-speaker"></div><img class="screenshot-image" src="assets/screenshots/statistics.webp" data-alt-fr="Statistiques de progression dans ChessFlow" data-alt-en="Progress statistics in ChessFlow" alt="Progress statistics in ChessFlow" width="1080" height="2133" loading="lazy" decoding="async" fetchpriority="low"></div>
+            </figure>
+          </div>
         </div>
       </div>
     </section>
@@ -308,8 +244,8 @@
     <section class="download-section" id="download">
       <div class="container download-card reveal">
         <div class="download-mark"><img src="assets/chessflow-icon.png" alt="" width="100" height="100"></div>
-        <div class="download-copy"><p class="eyebrow" data-fr="À vous de jouer" data-en="Your move">Your move</p><h2 data-fr="Faites de vos ouvertures<br>un véritable avantage." data-en="Turn your openings<br>into a real advantage.">Turn your openings<br>into a real advantage.</h2><p data-fr="Téléchargez ChessFlow gratuitement et commencez votre prochain entraînement aujourd’hui." data-en="Download ChessFlow for free and start your next training session today.">Download ChessFlow for free and start your next training session today.</p></div>
-        <a class="button button-primary" href="https://play.google.com/store/apps/details?id=com.rolf.ChessFlow" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m3.4 2.7 10.8 9.3L3.4 21.3c-.3-.4-.4-.9-.4-1.5V4.2c0-.6.1-1.1.4-1.5Zm12 10.3 2.7 2.3-11.7 6.4 9-8.7Zm3.9-3.2c.5.3.7.7.7 1.2s-.2.9-.7 1.2l-2.1 1.2-2.9-2.4 2.9-2.4 2.1 1.2ZM6.4 2.3l11.7 6.4-2.7 2.3-9-8.7Z"/></svg><span><small data-fr="Disponible sur" data-en="Get it on">Get it on</small><strong>Google Play</strong></span></a>
+        <div class="download-copy"><h2 data-fr="Commencez votre<br>entraînement." data-en="Start your<br>training.">Start your<br>training.</h2></div>
+        <a class="button button-primary" href="https://play.google.com/store/apps/details?id=com.rolf.ChessFlow" target="_blank" rel="noopener noreferrer" data-play-cta="final"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m3.4 2.7 10.8 9.3L3.4 21.3c-.3-.4-.4-.9-.4-1.5V4.2c0-.6.1-1.1.4-1.5Zm12 10.3 2.7 2.3-11.7 6.4 9-8.7Zm3.9-3.2c.5.3.7.7.7 1.2s-.2.9-.7 1.2l-2.1 1.2-2.9-2.4 2.9-2.4 2.1 1.2ZM6.4 2.3l11.7 6.4-2.7 2.3-9-8.7Z"/></svg><span><small data-fr="Disponible sur" data-en="Get it on">Get it on</small><strong>Google Play</strong></span></a>
       </div>
     </section>
   </main>
@@ -317,7 +253,7 @@
   <footer class="site-footer">
     <div class="container footer-layout">
       <a class="brand" href="#top"><img src="assets/chessflow-icon.png" alt="" width="38" height="38"><span>ChessFlow</span></a>
-      <p>© <span data-current-year>2026</span> ChessFlow. <span data-fr="Tous droits réservés." data-en="All rights reserved.">All rights reserved.</span></p>
+      <p>© <span data-current-year>2026</span> ChessFlow</p>
       <ul><li><a href="guide/en.html" data-fr="Guide" data-en="Guide">Guide</a></li><li><a href="privacy-en.html" data-fr="Confidentialité" data-en="Privacy">Privacy</a></li><li><a href="delete-account-en.html" data-fr="Supprimer mon compte" data-en="Delete my account">Delete my account</a></li><li><a href="mailto:chessflowof@gmail.com" data-fr="Contact" data-en="Contact">Contact</a></li></ul>
     </div>
   </footer>
