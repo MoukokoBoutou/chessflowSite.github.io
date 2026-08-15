@@ -25,9 +25,9 @@
   <link rel="stylesheet" href="/assets/site.css">
   <script src="/assets/language-redirect.js" data-preserve-path-tail="true"></script>
   <script src="/assets/deep-link.js" defer></script>
-  <script src="/assets/puzzle-preview.js" defer></script>
+  <script src="/assets/board-preview.js" defer></script>
 </head>
-<body class="puzzle-link-page" data-deep-link-kind="puzzle" data-deep-link-language="en">
+<body class="puzzle-link-page deep-link-board-page" data-deep-link-kind="puzzle" data-deep-link-language="en">
   <main class="puzzle-open-main">
     <section class="puzzle-open-card">
       <img src="/assets/chessflow-icon.png" alt="" width="72" height="72">
@@ -37,9 +37,9 @@
       </div>
       <h1>ChessFlow puzzle</h1>
       <p id="puzzle-open-message" data-deep-link-status role="status" aria-live="polite" aria-atomic="true">Open this puzzle in ChessFlow.</p>
-      <div class="puzzle-board-shell" data-puzzle-preview>
-        <div class="puzzle-board-loading" data-puzzle-loading>Loading position…</div>
-        <div class="puzzle-board-preview" data-puzzle-board role="img" aria-label="Puzzle starting position"></div>
+      <div class="puzzle-board-shell" data-board-preview>
+        <div class="puzzle-board-loading">Loading position…</div>
+        <div class="puzzle-board-preview" data-preview-board role="img" aria-label="Puzzle starting position"></div>
       </div>
       <div class="puzzle-open-actions">
         <a class="button button-primary" id="open-app-link" data-deep-link-button href="https://play.google.com/store/apps/details?id=com.rolf.ChessFlow">Open or install ChessFlow</a>

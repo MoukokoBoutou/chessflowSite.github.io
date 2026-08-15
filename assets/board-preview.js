@@ -1,12 +1,13 @@
 (() => {
-  const shell = document.querySelector('[data-puzzle-preview]');
-  const boardElement = document.querySelector('[data-puzzle-board]');
-  if (!shell || !boardElement) return;
+  const shell = document.querySelector('[data-board-preview]');
+  const boardElement = document.querySelector('[data-preview-board]');
+  const kind = document.body.dataset.deepLinkKind;
+  if (!shell || !boardElement || !['puzzle', 'opening'].includes(kind)) return;
 
   const projectUrl = 'https://kfdngvttwavrydtstwgq.supabase.co';
   const publishableKey = 'sb_publishable__p8irMwilwwAIE8qH0kQfA_h8NLRtJb';
   const segments = window.location.pathname.split('/').filter(Boolean);
-  const pathIdentifier = segments[0] === 'puzzle'
+  const pathIdentifier = segments[0] === kind
     ? (segments[1] === 'en' ? segments[2] : segments[1])
     : null;
   const identifier = pathIdentifier || new URLSearchParams(window.location.search).get('id');
@@ -15,6 +16,7 @@
     P: 'wP.svg', N: 'wN.svg', B: 'wB.svg', R: 'wR.svg', Q: 'wQ.svg', K: 'wK.svg',
     p: 'bP.svg', n: 'bN.svg', b: 'bB.svg', r: 'bR.svg', q: 'bQ.svg', k: 'bK.svg',
   };
+
   const parseFen = (fen) => {
     const [placement, activeColor = 'w'] = String(fen || '').trim().split(/\s+/);
     const ranks = placement ? placement.split('/') : [];
@@ -76,11 +78,11 @@
     };
   };
 
-  const renderBoard = (position) => {
-    const orientation = position.activeColor === 'b' ? 'black' : 'white';
-    const displayIndices = orientation === 'white'
-      ? Array.from({ length: 64 }, (_, index) => index)
-      : Array.from({ length: 64 }, (_, index) => 63 - index);
+  const renderBoard = (position, requestedOrientation) => {
+    const orientation = requestedOrientation || (position.activeColor === 'b' ? 'black' : 'white');
+    const displayIndices = orientation === 'black'
+      ? Array.from({ length: 64 }, (_, index) => 63 - index)
+      : Array.from({ length: 64 }, (_, index) => index);
     const fragment = document.createDocumentFragment();
 
     displayIndices.forEach((squareIndexValue, displayIndex) => {
@@ -124,6 +126,36 @@
     shell.classList.add('is-ready');
   };
 
+  const requestRows = (table, select) => {
+    const query = new URLSearchParams({ id: `eq.${identifier}`, select, limit: '1' });
+    return fetch(`${projectUrl}/rest/v1/${table}?${query}`, {
+      headers: {
+        apikey: publishableKey,
+        Authorization: `Bearer ${publishableKey}`,
+        Accept: 'application/json',
+      },
+      signal: controller.signal,
+    }).then((response) => {
+      if (!response.ok) throw new Error(`${table} request failed: ${response.status}`);
+      return response.json();
+    }).then((rows) => Array.isArray(rows) ? rows[0] : null);
+  };
+
+  const loadPuzzle = () => requestRows('puzzle', 'fen,moves').then((puzzle) => {
+    if (!puzzle || !puzzle.fen) throw new Error('Puzzle not found');
+    const initialPosition = parseFen(puzzle.fen);
+    const firstMove = String(puzzle.moves || '').trim().split(/\s+/)[0];
+    renderBoard(applyFirstMove(initialPosition, firstMove) || initialPosition);
+  });
+
+  const loadOpening = () => requestRows('link_openings', 'fen,side')
+    .then((opening) => opening || requestRows('openings', 'fen,side'))
+    .then((opening) => {
+      if (!opening || !opening.fen) throw new Error('Opening not found');
+      const orientation = String(opening.side).toUpperCase() === 'B' ? 'black' : 'white';
+      renderBoard(parseFen(opening.fen), orientation);
+    });
+
   const hidePreview = () => shell.classList.add('is-unavailable');
   if (!identifier || identifier.length > 128) {
     hidePreview();
@@ -132,31 +164,7 @@
 
   const controller = new AbortController();
   const timeout = window.setTimeout(() => controller.abort(), 6000);
-  const query = new URLSearchParams({
-    id: `eq.${identifier}`,
-    select: 'fen,moves',
-    limit: '1',
-  });
-
-  fetch(`${projectUrl}/rest/v1/puzzle?${query}`, {
-    headers: {
-      apikey: publishableKey,
-      Authorization: `Bearer ${publishableKey}`,
-      Accept: 'application/json',
-    },
-    signal: controller.signal,
-  })
-    .then((response) => {
-      if (!response.ok) throw new Error(`Puzzle request failed: ${response.status}`);
-      return response.json();
-    })
-    .then((rows) => {
-      const puzzle = Array.isArray(rows) ? rows[0] : null;
-      if (!puzzle || !puzzle.fen) throw new Error('Puzzle not found');
-      const initialPosition = parseFen(puzzle.fen);
-      const firstMove = String(puzzle.moves || '').trim().split(/\s+/)[0];
-      renderBoard(applyFirstMove(initialPosition, firstMove) || initialPosition);
-    })
+  (kind === 'opening' ? loadOpening() : loadPuzzle())
     .catch(hidePreview)
     .finally(() => window.clearTimeout(timeout));
 })();
