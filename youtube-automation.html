@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07090d">
+  <meta name="robots" content="index, follow">
+  <meta name="description" content="Présentation de ChessFlow Automation, l’outil interne de publication des vidéos ChessFlow sur YouTube.">
+  <link rel="canonical" href="https://chessflow.fr/youtube-automation.html">
+  <link rel="alternate" hreflang="fr" href="https://chessflow.fr/youtube-automation.html">
+  <link rel="alternate" hreflang="en" href="https://chessflow.fr/youtube-automation-en.html">
+  <link rel="alternate" hreflang="x-default" href="https://chessflow.fr/youtube-automation.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ChessFlow">
+  <meta property="og:title" content="ChessFlow Automation">
+  <meta property="og:description" content="Outil interne de génération et de publication des vidéos ChessFlow sur YouTube.">
+  <meta property="og:url" content="https://chessflow.fr/youtube-automation.html">
+  <meta property="og:image" content="https://chessflow.fr/assets/chessflow-icon.png">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:locale:alternate" content="en_US">
+  <title>ChessFlow Automation</title>
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
+  <link rel="apple-touch-icon" href="assets/favicon-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/site.css">
+  <script src="assets/language-redirect.js"></script>
+  <script src="assets/site.js" defer></script>
+</head>
+<body data-page="youtube-automation" data-default-language="fr">
+  <a class="skip-link" href="#main">Aller au contenu</a>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Navigation principale">
+      <a class="brand" href="index.html"><img src="assets/chessflow-icon.png" alt="" width="42" height="42"><span>ChessFlow</span></a>
+      <div class="nav-actions">
+        <div class="language-switcher" aria-label="Choisir la langue"><a href="youtube-automation.html" lang="fr" hreflang="fr" aria-current="page">FR</a><a href="youtube-automation-en.html" lang="en" hreflang="en">EN</a></div>
+        <a class="button button-small" href="index.html#download">Télécharger</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="legal-main" id="main">
+    <div class="container">
+      <a class="legal-back" href="index.html"><span aria-hidden="true">←</span><span>Retour à l’accueil</span></a>
+      <header class="legal-hero reveal">
+        <p class="eyebrow">Outil interne ChessFlow</p>
+        <h1>ChessFlow<br><em>Automation</em></h1>
+        <p>ChessFlow Automation génère des vidéos courtes de puzzles d’échecs et les publie sur la chaîne YouTube officielle de ChessFlow.</p>
+      </header>
+
+      <article class="legal-card reveal">
+        <section>
+          <h2>1. Fonctionnement de l’application</h2>
+          <p>L’outil sélectionne un puzzle d’échecs, produit automatiquement une vidéo verticale avec les animations et l’identité visuelle ChessFlow, puis prépare son titre et sa description. Il est exploité uniquement par ChessFlow et n’est pas proposé aux utilisateurs du public.</p>
+        </section>
+        <section>
+          <h2>2. Utilisation de YouTube</h2>
+          <p>ChessFlow Automation utilise l’API YouTube Data pour envoyer les vidéos générées vers la chaîne autorisée. L’application demande uniquement l’autorisation <code>youtube.upload</code>, indispensable à cette publication. Elle ne demande pas l’accès aux e-mails, contacts, fichiers Google Drive ou autres données du compte Google.</p>
+        </section>
+        <section>
+          <h2>3. Autorisation et sécurité</h2>
+          <p>Seul le propriétaire de la chaîne ChessFlow peut autoriser l’application. Le jeton OAuth obtenu est conservé comme secret chiffré dans l’environnement privé GitHub Actions de ChessFlow ; il n’est ni publié dans le code source ni partagé avec des tiers.</p>
+        </section>
+        <section>
+          <h2>4. Contrôle de l’accès</h2>
+          <p>Le propriétaire du compte peut révoquer l’autorisation à tout moment depuis les <a href="https://myaccount.google.com/connections">connexions de son compte Google</a>. La révocation empêche immédiatement toute nouvelle publication par l’automatisation.</p>
+        </section>
+        <section>
+          <h2>5. Confidentialité et contact</h2>
+          <p>Les informations détaillées sur l’utilisation, la conservation et la suppression des données sont disponibles dans la <a href="privacy.html">politique de confidentialité de ChessFlow</a>. Pour toute question, contactez <a href="mailto:chessflowof@gmail.com">chessflowof@gmail.com</a>.</p>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-layout"><a class="brand" href="index.html"><img src="assets/chessflow-icon.png" alt="" width="38" height="38"><span>ChessFlow</span></a><p>© <span data-current-year>2026</span> ChessFlow.</p><ul><li><a href="privacy.html">Confidentialité</a></li><li><a href="mailto:chessflowof@gmail.com">Contact</a></li></ul></div></footer>
+</body>
+</html>

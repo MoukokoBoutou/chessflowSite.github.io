@@ -147,7 +147,7 @@
   </url>
   <url>
     <loc>https://chessflow.fr/privacy.html</loc>
-    <lastmod>2026-06-23</lastmod>
+    <lastmod>2026-08-29</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://chessflow.fr/privacy.html" />
@@ -156,12 +156,30 @@
   </url>
   <url>
     <loc>https://chessflow.fr/privacy-en.html</loc>
-    <lastmod>2026-06-23</lastmod>
+    <lastmod>2026-08-29</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://chessflow.fr/privacy.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://chessflow.fr/privacy-en.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://chessflow.fr/privacy.html" />
+  </url>
+  <url>
+    <loc>https://chessflow.fr/youtube-automation.html</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://chessflow.fr/youtube-automation.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://chessflow.fr/youtube-automation-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chessflow.fr/youtube-automation.html" />
+  </url>
+  <url>
+    <loc>https://chessflow.fr/youtube-automation-en.html</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://chessflow.fr/youtube-automation.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://chessflow.fr/youtube-automation-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chessflow.fr/youtube-automation.html" />
   </url>
   <url>
     <loc>https://chessflow.fr/delete-account.html</loc>
